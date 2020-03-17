@@ -1,12 +1,18 @@
 from django.urls import path
-from django.views.generic import TemplateView, DetailView
+
 
 from . import views
 
 
+
+
 app_name = 'polls'
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
+    #path('index/', IndexView.as_view()),
+    #path('detail/', DetailView.as_view()),
+    #path('results/', ResultsView.as_view()),
+    #path('/vote', vote().as_view()),
+    path('index/', views.IndexView.as_view(), name='index'),
     path('<int:pk>/', views.DetailView.as_view(), name='detail'),
     path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
     path('<int:question_id>/vote/', views.vote, name='vote'),
