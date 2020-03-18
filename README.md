@@ -1,6 +1,6 @@
-## tuto django
+# tuto django
 
-# rapel commande
+## rapel commande
 
 - Création de projet
 
